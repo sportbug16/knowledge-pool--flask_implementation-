@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Questions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+<body>
+    <ul>
+        {% for question in questions %}
+        <li><a href="/questions/{{ question.problem_id }}">{{ question.problem_title }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Knowledge-Pool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+<body>
+    <h3>Knowledge Pool</h3>
+    <form action="/" method="post">
+        <p>Which subtopic of DSA would you like to explore?</p>
+        <input type="text" name="subtopic" placeholder="Enter topics separated by comma" required />
+        <p>What should be the level of difficulty?</p>
+        <input type="text" name="difficulty" placeholder="Enter 'easy, medium or hard'" required />
+        <p>How many questions do you want?</p>
+        <input type="text" name="number" placeholder="Enter integer number" required />
+{#        <p>Do you also want the solutions to the questions be generated?</p>#}
+{#        <input type="text" name="solution_wanted" placeholder="Enter integer number" required />#}
+        <button type="submit" name="action" value="generate">Generate new question</button>
+        <button type="submit" name="action" value="retrieve">Generate from existing questions</button>
+    </form>
+{#    {% if result %}#}
+{#    <div class="result">{{ result }}</div>#}
+{#    {% endif %}#}
+</body>
+</html>
